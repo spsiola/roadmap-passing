@@ -1,8 +1,15 @@
 <template>
-  <div>Выводим майлстоун!</div>
+  <div>
+    Выводим майлстоун!
+    <p v-for="(stone, index) in mileStones" :key="index">
+      {{ index }}: {{ stone }}
+    </p>
+  </div>
 </template>
 <script>
-export default {};
+export default {
+  props: ["mileStones"],
+};
 </script>
 <style>
 </style>

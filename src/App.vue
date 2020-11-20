@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <MileStone :mile-stones="mileStones" />
   </div>
 </template>
 
@@ -8,6 +9,11 @@ import MileStone from './components/MileStone.vue'
 
 export default {
   name: 'App',
+  data(){
+    return {
+      mileStones: ['Internet','HTML','CSS','JavaScript','Version Cotrol Systems','Web Security Knoledge','Package Managers']
+    }
+  },
   components: {
     MileStone
   }
