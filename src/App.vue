@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <MileStone :mile-stones="mileStones" />
+    <MileStone :mile-stones="mileStones" @done-stone='doneStone' />
   </div>
 </template>
 
@@ -16,6 +16,11 @@ export default {
   },
   components: {
     MileStone
+  },
+  methods: {
+    doneStone(index){
+      this.mileStones.splice(index, 1);
+    }
   }
 }
 </script>
